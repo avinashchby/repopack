@@ -1,0 +1,52 @@
+{
+  "name": "repopack",
+  "version": "0.1.0",
+  "description": "Pack an entire codebase into a single LLM-optimized markdown file",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "repopack": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "llm",
+    "codebase",
+    "context",
+    "markdown",
+    "chatgpt",
+    "claude",
+    "gemini",
+    "repopack"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "clipboardy": "^4.0.0",
+    "commander": "^12.1.0",
+    "fast-glob": "^3.3.2",
+    "ignore": "^6.0.2",
+    "strip-comments": "^2.0.1",
+    "tiktoken": "^1.0.18"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0",
+    "vitest": "^2.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ]
+}
